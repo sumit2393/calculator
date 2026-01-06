@@ -6,5 +6,9 @@ void main() {
     test('Empty string should return 0', () {
       expect(add(""), equals(0));
     });
+
+    test('Single number should return the number', () {
+      expect(add("1"), equals(1));
+    });
   });
 }
