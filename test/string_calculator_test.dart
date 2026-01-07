@@ -28,14 +28,16 @@ void main() {
     });
 
     // Negative numbers should throw exception
-    expect(
-      () => add("1,-2"),
-      throwsA(
-        predicate(
-          (e) => e.toString().contains("negative numbers not allowed -2"),
+    test('Negative numbers should throw exception', () {
+      expect(
+        () => add("1,-2"),
+        throwsA(
+          predicate(
+            (e) => e.toString().contains("negative numbers not allowed -2"),
+          ),
         ),
-      ),
-    );
+      );
+    });
   });
   // Additional test for multiple negative numbers
   test('Multiple negative numbers should show all', () {

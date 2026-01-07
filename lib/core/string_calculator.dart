@@ -16,5 +16,11 @@ int add(String numbers) {
 
   final values = numbersPart.split(delimiter).map((e) => int.parse(e)).toList();
 
+  // Collect negatives
+  final negatives = values.where((n) => n < 0).toList();
+  if (negatives.isNotEmpty) {
+    throw Exception('negative numbers not allowed ${negatives.join(",")}');
+  }
+
   return values.reduce((a, b) => a + b);
 }
