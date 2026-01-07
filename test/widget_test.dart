@@ -9,8 +9,6 @@ import 'package:calculator/provider/calculator_provider.dart';
 import 'package:calculator/ui/calculator_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:calculator/main.dart';
 import 'package:provider/provider.dart';
 
 void main() {
